@@ -1,0 +1,18 @@
+echo "----------------------------" > /tmp/log;
+echo "|  nslookup $1" >> /tmp/log
+echo "----------------------------" >> /tmp/log;
+nslookup $1 >> /tmp/log;
+sleep 3;
+
+echo " " >> /tmp/log; echo " " >> /tmp/log
+echo "----------------------------" >> /tmp/log;
+echo "|  wget $1" >> /tmp/log;
+echo "----------------------------" >> /tmp/log;
+wget $1 >> /tmp/log;
+sleep 3;
+
+echo " " >> /tmp/log; echo " " >> /tmp/log
+echo "----------------------------" >> /tmp/log;
+echo "|  nmap -p- $1" >> /tmp/log;
+echo "----------------------------" >> /tmp/log;
+nmap -p- $1 >> /tmp/log;
