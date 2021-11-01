@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       context: ngrok
     container_name: ngrok
-    command: /bin/sh -c "ngrok http golang-server:8090 --region eu & sh -c 'sleep 5 && getaddress > /tmp/newaddr && tail -f /tmp/newaddr'"
+    command: /bin/sh -c "ngrok http golang-server:8090 --region eu & sh -c 'sleep 3 && getaddress > /tmp/newaddr && tail -f /tmp/newaddr'"
   
   example-server:
     build:
@@ -18,6 +18,8 @@ services:
     command: go run main.go
 
   debug:
-    image: ubuntu:latest
+    build:
+      dockerfile: Dockerfile
+      context: example-debug
     container_name: debug_container
-    command: /bin/bash -c "scan "golang-server:8090" && tail -f /tmp/log"
+    command: /bin/bash -c 'sleep 5 && scan "golang-server:8090" && tail -f /tmp/log'
