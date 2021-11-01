@@ -1,8 +1,9 @@
 # ngrok-container-network
-
-Modify `ngrok/Dockerfile` and input your authorization token retrieved from [ngrok.com](ngrok.com)  
+## About
+system where you can easily host your containerized application using ngrok and docker-compose
 
 ## How to make it work for you case:  
+Modify `ngrok/Dockerfile` and input your authorization token retrieved from [ngrok.com](ngrok.com)  
 ### ngrok/Dockerfile
 * change auth token    
 
