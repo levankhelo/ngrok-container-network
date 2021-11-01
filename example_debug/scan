@@ -1,8 +1,0 @@
-echo "  nslookup $1\n---------" > /tmp/log
-nslookup $1 >> /tmp/log
-
-echo "\n\n  wget $1/\n---------" > /tmp/log
-wget $1/ >> /tmp/log
-
-echo "\n\n  nmap -p- $1/\n---------" > /tmp/log
-nmap -p- $1 >> /tmp/log
