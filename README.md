@@ -1,6 +1,5 @@
 # ngrok-container-network
-## About
-system where you can easily host your containerized application using ngrok and docker-compose
+Easily host your containerized (docker-compose) application using ngrok, and make it easily reachable using simple link
 
 ## How to make it work for you case:  
 Modify `ngrok/Dockerfile` and input your authorization token retrieved from [ngrok.com](ngrok.com)  
